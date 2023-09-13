@@ -2,3 +2,23 @@
         this.$EventBus.$emit('getUsername')
         this.$EventBus.$emit('checkLogin')
         this.$router.push({ path: '/' }).catch(() => {})
+
+
+
+        <!--- Navigationdrawer -->
+  <v-navigation-drawer
+  v-model = "drawer"
+    temporary
+    app
+    >
+      <v-list
+        nav
+      >
+        <v-sub
+
+      </v-list>
+  </v-navigation-drawer>
+
+  </v-app>
+
+
