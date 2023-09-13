@@ -1,0 +1,4 @@
+
+        this.$EventBus.$emit('getUsername')
+        this.$EventBus.$emit('checkLogin')
+        this.$router.push({ path: '/' }).catch(() => {})

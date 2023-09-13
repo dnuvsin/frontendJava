@@ -56,8 +56,6 @@ export default {
     login () {
       if (this.$refs.form.validate(true)) {
         localStorage.setItem('username', this.username)
-        this.$EventBus.$emit('getUsername')
-        this.$EventBus.$emit('checkLogin')
         this.$router.push({ path: '/' }).catch(() => {})
       }
     }
