@@ -57,10 +57,10 @@
       @click="gotoPage(item.link)"
       >
         <v-list-item-icon>
-          <v-icon>{{ item.icon }}}</v-icon>
+          <v-icon>{{ item.icon }}</v-icon>
         </v-list-item-icon>
         <v-list-item-content>
-          <v-list-item-title>{{ item.text }}}</v-list-item-title>
+          <v-list-item-title :to="{ name: item.link }">{{ item.text }}</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
      </v-list-item-group>
@@ -85,7 +85,7 @@ export default {
       MenuList: [
         { key: 1, text: 'หน้าหลัก', icon: 'mbi-home', link: '/' },
         { key: 2, text: 'หน้าเกี่ยวกับเรา', icon: 'mbi-information', link: '/about' },
-        { key: 3, text: 'หน้สจัดการข้อมูล', icon: 'mbi-table-edit', link: '/table' }
+        { key: 3, text: 'หน้าจัดการข้อมูล', icon: 'mbi-table-edit', link: '/table' }
       ],
       drawer: false,
       group: null,
@@ -102,6 +102,9 @@ export default {
   methods: ({
     goToLogin () {
       router.push('/login')
+    },
+    gotoPage () {
+      router.push({ path: link })
     }
   })
 }

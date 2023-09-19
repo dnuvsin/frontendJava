@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import TableData from '../components/TableData.vue'
 
 Vue.use(VueRouter)
 
@@ -22,6 +23,11 @@ const routes = [
     path: '/login',
     name: 'login',
     component: () => import('../components/LoginPage.vue')
+  },
+  {
+    path: '/table',
+    name: 'TableData',
+    component: TableData
   }
 ]
 
