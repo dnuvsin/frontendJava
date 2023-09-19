@@ -54,7 +54,7 @@
       v-for="item in MenuList"
       :key="item.key"
       link
-      @click="gotoPage(item.link)"
+      @click="$router.push({ path: item.link })"
       >
         <v-list-item-icon>
           <v-icon>{{ item.icon }}</v-icon>
@@ -104,6 +104,7 @@ export default {
       router.push('/login')
     },
     gotoPage () {
+      // eslint-disable-next-line
       router.push({ path: link })
     }
   })

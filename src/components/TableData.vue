@@ -49,7 +49,7 @@
                       <v-icon>mdi-pencil</v-icon>
                       </v-btn>
                       <v-btn small outlined @click="deleteItem(item)" color="red" class="ml-2">
-                        <v-icon>mbi-delete</v-icon>
+                        <v-icon>mdi-delete</v-icon>
                     </v-btn>
                   </template>
                 </v-col>
@@ -64,6 +64,7 @@
 </template>
 
 <script>
+
 export default {
   data () {
     return {
