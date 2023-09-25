@@ -83,9 +83,9 @@ export default {
   data () {
     return {
       MenuList: [
-        { key: 1, text: 'หน้าหลัก', icon: 'mbi-home', link: '/' },
-        { key: 2, text: 'หน้าเกี่ยวกับเรา', icon: 'mbi-information', link: '/about' },
-        { key: 3, text: 'หน้าจัดการข้อมูล', icon: 'mbi-table-edit', link: '/table' }
+        { key: 1, text: 'หน้าหลัก', icon: 'mdi-home', link: '/' },
+        { key: 2, text: 'หน้าเกี่ยวกับเรา', icon: 'mdi-information', link: '/about' },
+        { key: 3, text: 'หน้าจัดการข้อมูล', icon: 'mdi-table-edit', link: '/table' }
       ],
       drawer: false,
       group: null,
