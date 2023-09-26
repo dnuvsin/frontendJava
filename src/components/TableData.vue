@@ -63,69 +63,54 @@
               </v-btn>
             </v-card-actions>
         </v-card>
-    </v-dialog>
-    <v-dialog v-model="dialogDelete" max-width="500px">
-      <v-card>
-        <v-card-title class="text-h5">คุณต้องการลบข้อมูลในตารางใช่ หรือ ไม่</v-card-title>
-        <v-card-actions>
-          <v-spacer></v-spacer>
-          <v-btn color="blue darken-1" text @click="closeDelete()">ยกเลิก</v-btn>
-          <v-btn color="blue darken-1" text @click="deleteItemConfirm()">ตกลง</v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-dialog>
-</div>
+        </v-dialog>
+      </v-toolbar>
+    </template>
+  </v-data-table>
 </template>
 
 <script>
 export default {
   data () {
     return {
-      firstName: '',
-      lastName: '',
-      salary: '',
-      role: '',
       dialog: false,
       formTitle: '',
       editedIndex: -1,
-      headers: [{
-        text: 'id',
-        align: 'start',
-        sortable: false,
-        value: 'id'
+      editedItem: {
+        name: '',
+        calories: 0,
+        fat: 0,
+        carbs: 0,
+        protein: 0
       },
-      {
-        text: 'ชื่อ',
-        value: 'firstName'
+      defaultItem: {
+        name: '',
+        calories: 0,
+        fat: 0,
+        carbs: 0,
+        protein: 0
       },
-      {
-        text: 'นามสกุล',
-        value: 'lastName'
-      },
-      {
-        text: 'เงินเดือน',
-        value: 'salary'
-      },
-      {
-        text: 'role',
-        value: 'role'
-      },
-      {
-        text: 'skill',
-        value: 'skill'
-      },
-      {
-        text: 'จัดการ',
-        value: 'actions',
-        sortable: false
-      }
+      headers: [
+        {
+          text: 'ชื่อของหวาน',
+          align: 'start',
+          sortable: false,
+          value: 'name'
+        },
+        { text: 'แคลอรี่', value: 'calories' },
+        { text: 'ไขมัน', value: 'fat' },
+        { text: 'คาร์โบไฮเดรต', value: 'carbs' },
+        { text: 'โปรตีน', value: 'protein' },
+        { text: 'จัดการ', value: 'actions', sortable: false }
       ],
-      employeeItem: []
+      desserts: []
     }
   },
+
   created () {
     this.initialize()
   },
+
   methods: {
     async initialize () {
       this.employeeItem = []
