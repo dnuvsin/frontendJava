@@ -31,6 +31,11 @@
       <v-spacer></v-spacer>
       <v-btn
       text
+      @click="goToTable()">
+        หน้าจัดการข้อมูล
+      </v-btn>
+      <v-btn
+      text
       @click="goToLogin()">
         เข้าสู่ระบบ
       </v-btn>
@@ -101,11 +106,14 @@ export default {
   },
   methods: ({
     goToLogin () {
-      router.push('/login')
+      this.$router.push('/login')
     },
     gotoPage () {
       // eslint-disable-next-line
       router.push({ path: link })
+    },
+    goToTable () {
+      this.$router.push('/table')
     }
   })
 }
