@@ -106,14 +106,14 @@ export default {
   },
   methods: ({
     goToLogin () {
-      this.$router.push('/login')
+      this.$router.push({ path: '/login' }).catch(() => {})
     },
     gotoPage () {
       // eslint-disable-next-line
       router.push({ path: link })
     },
     goToTable () {
-      this.$router.push('/table')
+      this.$router.push({ path: '/table' }).catch(() => {})
     }
   })
 }
