@@ -31,6 +31,11 @@
       <v-spacer></v-spacer>
       <v-btn
       text
+      @click="goToStudent()">
+        Connect Backend
+      </v-btn>
+      <v-btn
+      text
       @click="goToTable()">
         หน้าจัดการข้อมูล
       </v-btn>
@@ -114,6 +119,9 @@ export default {
     },
     goToTable () {
       this.$router.push({ path: '/table' }).catch(() => {})
+    },
+    goToStudent () {
+      this.$router.push({ path: '/studentData' }).catch(() => {})
     }
   })
 }

@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import TableData from '../components/TableData.vue'
+import StudentView from '@/views/StudentView'
 
 Vue.use(VueRouter)
 
@@ -28,6 +29,11 @@ const routes = [
     path: '/table',
     name: 'TableData',
     component: TableData
+  },
+  {
+    path: '/studentData',
+    name: 'studentData',
+    component: StudentView
   }
 ]
 
